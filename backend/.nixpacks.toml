@@ -1,8 +1,8 @@
-[build]
-builder = "nixpacks"
+[phases.setup]
+nixPkgs = ["python311", "ffmpeg"]
 
-[deploy]
-startCommand = "python3 backend/app.py"
+[phases.install]
+cmds = ["pip install -r backend/requirements.txt"]
 
-[[dependencies]]
-name = "python311"
+[phases.start]
+cmds = ["gunicorn --chdir backend -b 0.0.0.0:8080 app:app"]
