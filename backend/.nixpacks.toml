@@ -2,7 +2,7 @@
 builder = "nixpacks"
 
 [deploy]
-startCommand = "python backend/app.py"
+startCommand = "python3 backend/app.py"
 
 [[dependencies]]
-name = "ffmpeg"
+name = "python311"
