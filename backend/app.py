@@ -42,3 +42,4 @@ async def convert(data: dict):
         raise HTTPException(status_code=500, detail="Failed to download and convert video")
 
     return FileResponse(mp3_file, filename=os.path.basename(mp3_file), media_type='audio/mpeg')
+
