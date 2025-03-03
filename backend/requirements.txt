@@ -1,5 +1,4 @@
-flask
-flask-cors
+fastapi
+uvicorn
 yt-dlp
-gunicorn
-ffmpeg-python
+aiofiles  # Required for sending files
